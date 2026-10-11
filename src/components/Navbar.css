@@ -1,0 +1,136 @@
+
+.navbar {
+  width: 100%;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navbar-container {
+  width: min(1120px, calc(100% - 48px));
+  min-height: 76px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.navbar-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--color-text);
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -1.2px;
+}
+
+.logo-mark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.navbar-links,
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navbar-links a,
+.navbar-contact {
+  color: var(--color-muted);
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover,
+.navbar-contact:hover,
+.navbar-links a.active {
+  color: var(--color-primary);
+}
+
+.navbar-actions {
+  gap: 22px;
+}
+
+.navbar-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 17px;
+  border-radius: 6px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.navbar-cta:hover {
+  background: #18392b;
+}
+
+@media (max-width: 650px) {
+  .navbar-container {
+    width: calc(100% - 32px);
+    min-height: 68px;
+    gap: 14px;
+  }
+
+  .navbar-links {
+    gap: 14px;
+  }
+
+  .navbar-links a,
+  .navbar-contact {
+    font-size: 12px;
+  }
+
+  .navbar-actions {
+    gap: 10px;
+  }
+
+  .navbar-contact {
+    display: none;
+  }
+
+  .navbar-cta {
+    padding: 10px 11px;
+    font-size: 12px;
+  }
+
+  .navbar-logo {
+    font-size: 22px;
+  }
+
+  .logo-mark {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar-container {
+    flex-wrap: wrap;
+    padding: 12px 0;
+  }
+
+  .navbar-links {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .navbar-actions {
+    margin-left: auto;
+  }
+}
